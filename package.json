@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc && serverless offline",
-    "deploy": "tsc && cp serverless.yml dist/serverless.yml && mkdir -p dist/layer/nodejs && cp package.json dist/layer/nodejs/package.json && cd dist/layer/nodejs && yarn --production && cd ../../ && pwd && npm init -y && npx serverless deploy"
+    "deploy": "yarn && tsc && cp serverless.yml dist/serverless.yml && mkdir -p dist/layer/nodejs && cp package.json dist/layer/nodejs/package.json && cd dist/layer/nodejs && yarn --production && cd ../../ && pwd && npm init -y && npx serverless deploy"
   },
   "keywords": [],
   "author": "",
