@@ -5,15 +5,13 @@ provider:
   name: aws
   region: eu-west-1
   runtime: nodejs12.x
-  memorySize: 512
+  memorySize: 128
 
 plugins:
   - serverless-offline
-  # - serverless-plugin-typescript
 
 functions:
   graphql:
-    # this is formatted as <FILENAME>.<HANDLER>
     handler: index.graphqlHandler
     layers:
       - {Ref: ApolloLibLambdaLayer}
